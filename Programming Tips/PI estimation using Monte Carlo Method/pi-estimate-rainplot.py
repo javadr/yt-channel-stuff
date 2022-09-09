@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# inspired by
+# inspired by https://matplotlib.org/stable/gallery/animation/rain.html
 
 import numpy as np
 import matplotlib.pyplot as plt
