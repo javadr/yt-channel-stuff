@@ -1,0 +1,18 @@
+# Linux Tips Playlist
+
+1.  [qrcode as a service in linux shell](https://www.youtube.com/watch?v=MVZPgNsktBo)
+1.  [چسباندن سطرهای دوفایل با/بدون فیلد مشترک](https://www.youtube.com/watch?v=s0fBZ8HU_Nk)
+1.  [تغییر سایز فایل تصویر با کمک jpegoptim](https://www.youtube.com/watch?v=yao26rr4uYg)
+1.  [معرفی سوئیچ -o از ابزار کاربردی grep](https://www.youtube.com/watch?v=Cw-n74ZzXZc)
+1.  [حذف فایلی که نامش با - شروع شده](https://www.youtube.com/watch?v=WSsyUUuWkvY)
+1.  [!! Bang Bang بنگ بنگ در شل بش](https://www.youtube.com/watch?v=0DrPq3uGr7k)
+1.  [یافتن جواب بازی wordle در تاریخ ۵ بهمن ۱۴۰۰](https://www.youtube.com/watch?v=fy_-bCHq4qw)
+1.  [یافتن کلمات معکوس با کمک شل لینوکس](https://www.youtube.com/watch?v=H5pOkRxluNM)
+1.  [یافتن کلمات متقارن (palindrome) با کمک شل لینوکس](https://www.youtube.com/watch?v=tkwKLBzm9V4)
+1.  [حذف خطوط خالی فایل](https://www.youtube.com/watch?v=agUQWNO-Emo)
+1.  [نمایش یک یا چند خط قبل/بعد از الگوی تطابق یافته در فایل با کمک grep](https://www.youtube.com/watch?v=aq9TKqWg_dQ)
+1.  [انواع دستورات در خط فرمان لینوکس](https://www.youtube.com/watch?v=iSiC57Za3u0)
+1.  [shebang #! شی بنگ در لینوکس](https://www.youtube.com/watch?v=8rGnBK5tiNU)
+1.  [تولید اعداد تصادفی در شل لینوکس](https://www.youtube.com/watch?v=Qajvb-DfP9c)
+1.  [ما أجملها من نظرة والنظر في المصحف عبادة ! شاهد الشيخ غلوش يتجلى في فيديو نادر من سورة آل عمران HD](https://www.youtube.com/watch?v=4aAA3dS4Ub4)
+1.  [شمارش تعداد عناصر غیر صفر در هر ستون از یک ماتریس اسپارس در خط فرمان لینوکس](https://www.youtube.com/watch?v=EwQ8Hq-X-dw)
