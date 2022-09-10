@@ -14,5 +14,4 @@
 1.  [انواع دستورات در خط فرمان لینوکس](https://www.youtube.com/watch?v=iSiC57Za3u0)
 1.  [shebang #! شی بنگ در لینوکس](https://www.youtube.com/watch?v=8rGnBK5tiNU)
 1.  [تولید اعداد تصادفی در شل لینوکس](https://www.youtube.com/watch?v=Qajvb-DfP9c)
-1.  [ما أجملها من نظرة والنظر في المصحف عبادة ! شاهد الشيخ غلوش يتجلى في فيديو نادر من سورة آل عمران HD](https://www.youtube.com/watch?v=4aAA3dS4Ub4)
 1.  [شمارش تعداد عناصر غیر صفر در هر ستون از یک ماتریس اسپارس در خط فرمان لینوکس](https://www.youtube.com/watch?v=EwQ8Hq-X-dw)
