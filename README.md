@@ -1,5 +1,5 @@
 # yt-channel-stuff
-Related Stuff to [`Persian CS University`](https://www.youtube.com/channel/UCWNBFYqqMuBM14R7zzi7nqw) youtube channel.
+Related Stuff to [`Persian CS University`](https://www.youtube.com/@persiancsuniversity) youtube channel.
 It encompasses several playlists:
 
 1. [Programming Tips](https://www.youtube.com/watch?v=QAA1_OSW-zA&list=PLKkucQIc4RnYJN0-3MfuppHcCCLAxvBxx)
