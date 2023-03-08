@@ -15,3 +15,4 @@
 1.  [shebang #! شی بنگ در لینوکس](https://www.youtube.com/watch?v=8rGnBK5tiNU)
 1.  [تولید اعداد تصادفی در شل لینوکس](https://www.youtube.com/watch?v=Qajvb-DfP9c)
 1.  [شمارش تعداد عناصر غیر صفر در هر ستون از یک ماتریس اسپارس در خط فرمان لینوکس](https://www.youtube.com/watch?v=EwQ8Hq-X-dw)
+1.  [محاسبه بسامد رخداد هر مقدار در ماتریس اسپارس بیان‌ ژن در خط فرمان لینوکس](https://www.youtube.com/watch?v=4WBJ9WKcJ-8)
