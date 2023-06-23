@@ -39,5 +39,6 @@
 1.  [پاسخ به تمرین ۶.۲.۲ کتاب هاپکرافت](https://www.youtube.com/watch?v=rzLBqqv6IIM)
 1.  [مستقل از متن بودن a^nb^m آن زمانی که تعداد a,bها برابر نباشد.](https://www.youtube.com/watch?v=APt_6Pb-iME)
 1.  [مستقل از متن بودن زبان a^nb^m به قسمیکه تعداد bها از دوبرابر aها کمتر بوده و  از خود aها بیشتر باشد](https://www.youtube.com/watch?v=-FKEJqvINLk)
+1.  [FL#QA#حل‌تمرین؛ تشخیص جایگاه زبان داده‌شده در سلسله مراتب چامسکی](https://www.youtube.com/watch?v=Bsz-eCczmOY)
 
 

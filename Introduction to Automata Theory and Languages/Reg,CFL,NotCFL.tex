@@ -1,0 +1,54 @@
+%! TEX program = xelatex
+
+\documentclass[12pt,fleqn]{article}
+
+\usepackage[top=1.5cm,bottom=2.5cm,left=2cm,,right=2cm,a4paper]{geometry}
+%\usepackage[pscoord=false,grid, gridunit=mm, gridcolor=blue!40, subgridcolor=blue!20]{eso-pic}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{lipsum}
+
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[remember picture, overlay,
+                    help lines/.append style={line width=0.05pt,
+                                              color=gray!1},
+                    major divisions/.style={help lines,line width=0.1pt,
+                                            color=red!10} ]
+  \draw[help lines] (current page.south west) grid[step=0.5pt]
+                    (current page.north east);
+  \draw[major divisions] (current page.south west) grid[step=5pt]
+                         (current page.north east);
+\end{tikzpicture}%
+}
+\usepackage{amsmath}
+\usepackage{multicol}
+
+\setlength{\mathindent}{0pt}
+
+\begin{document}
+\ttfamily
+\thispagestyle{empty}
+
+\centerline{\large Identify the Class of Given Languages (Reg., C.F.L., Not C.F.L.)}
+\medskip\hrule\hrule 
+
+\[\begin{array}{rl}
+L_1 = &  \{ww^R \mid w \in \{a,b\}^*\}\\[.9cm]
+L_2 = &  \{ww^R \mid w \in \{a,b\}^+\}\\[.9cm]
+L_3 = &  \{wxw \mid w,x \in \{a,b\}^*\}\\[.9cm]
+L_4 = &  \{wxw \mid w,x \in \{a,b\}^+\}\\[.9cm]
+L_5 = &  \{wxw^R \mid w,x \in \{a,b\}^*\}\\[.9cm]
+L_6 = &  \{wxw^R \mid w,x \in \{a,b\}^+\}\\[.9cm]
+L_7 = &  \{wxw^R \mid w \in \{a,b\}^*, x\not\in \{a,b\}\}\\[.9cm]
+L_8 = &  \{wxw^R \mid w \in \{a,b\}^+, x\not\in \{a,b\}\}\\[.9cm]
+L_9 = &  \{ww \mid w \in \{a,b\}^*\}\\[.9cm]
+L_{10} = &  \{ww \mid w \in \{a,b\}^+\}\\[.9cm]
+L_{11} = &  \{wxwy \mid w,x,y \in \{a,b\}^+\}\\[.9cm]
+L_{12} = &  \{xwyw \mid w,x,y \in \{a,b\}^+\}\\[.9cm]
+L_{13} = &  \{wxyw \mid w,x,y \in \{a,b\}^+\}\\[.9cm]
+L_{14} = &  \{xww \mid w,x \in \{a,b\}^*\}\\[.9cm]
+L_{15} = &  \{xww \mid w,x \in \{a,b\}^+\}\\[.9cm]
+L_{16} = &  \{xww^R \mid w,x \in \{a,b\}^+\}\\[.9cm]
+\end{array}
+\]
+\end{document}
