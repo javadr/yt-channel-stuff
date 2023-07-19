@@ -24,3 +24,6 @@
 1.  [محاسبه دقیق زمان اجرای کد در پایتون](https://www.youtube.com/watch?v=RKkZBCUOH8U)
 1.  [کابوس تعریف و مقداردهی اولیه متغیرها در زبان C++](https://www.youtube.com/watch?v=m7EukUZZIAo)
 1.  [محاسبه تقریبی عدد پی با کمک روش مونت کارلو](https://www.youtube.com/watch?v=cFsiNLe9BO4) ([code](https://github.com/javadr/yt-channel-stuff/tree/main/Programming%20Tips/PI%20estimation%20using%20Monte%20Carlo%20Method))
+1. [مقابله دو متن در پایتون](https://www.youtube.com/watch?v=eg4IbmXqCMI)
+1. [نحوه اتصال رشته‌ها در پایتون](https://www.youtube.com/watch?v=zj0CVOkLIiI)
+1. [قواعد نامگذاری در زبان‌های برنامه‌نویسی](https://www.youtube.com/watch?v=Ugy4N6FJKs0)
