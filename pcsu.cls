@@ -2,7 +2,9 @@
 \ProvidesClass{pcsu}[]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \newif\ifpcsu@han
-\DeclareOption{han}{\pcsu@hantrue}%
+\newif\ifpcsu@boundingbox
+\DeclareOption{han}{\pcsu@hantrue}
+\DeclareOption{boundingbox}{\pcsu@boundingboxtrue}
 \ProcessOptions\relax
 \LoadClass[20pt, landscape]{extarticle}
 \RequirePackage{xparse}
@@ -35,7 +37,7 @@
         \node (tr) at (pcs.north east) {\ornament[height=2cm, symmetry=v]{#4}};
         \node (bl) at (text.south west) {\ornament[height=2cm, symmetry=h]{#4}};
         \node (br) at (text.south east) {\ornament[height=2cm, symmetry=c]{#4}};
-        \draw [use as bounding box, double, thick] (tl.north west) rectangle (br.south east);
+        \ifpcsu@boundingbox\draw [use as bounding box, double, thick] (tl.north west) rectangle (br.south east);\fi
     \end{tikzpicture}
 }
 %% End of file
