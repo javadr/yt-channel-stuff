@@ -33,13 +33,14 @@
 \hskip-13pt%
 CS}
 %
-\DeclareDocumentCommand{\pcsucaption}{ O{16} O{20} m O{61} }{%
-\def\pcsu@opacity{\ifx#3\relax 1\else .6\fi}%
+\DeclareDocumentCommand{\pcsucaption}{ O{24} O{30} m O{61} }{%
+\edef\pcsu@opacity{\ifx#3\relax 1\else .6\fi}%
 \savebox{\captionbox}{\ttfamily\textcolor{gray}{\fontsize{#1}{#2}\selectfont #3}}%
     \begin{tikzpicture}[color=black]
         \node (pcs) {\usebox{\pcsbox}};
         \node (univ) [anchor=north, yshift=2mm]  at (pcs.south) {\usebox{\univbox}};
-        \node (text) [anchor=north, yshift=\ifx#3\relax 0\else-3mm\fi] at (univ.south){%
+        \edef\yshift{\ifx#3\relax 0mm\else -3mm\fi}
+        \node (text) [anchor=north, yshift=\yshift] at (univ.south){%
             {\makebox[\wd\univbox]{%
                 \ifdim\wd\captionbox>\wd\univbox
                     \resizebox*{\wd\univbox}{!}{\usebox{\captionbox}}%
