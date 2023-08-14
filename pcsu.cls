@@ -7,6 +7,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{standalone}}
 \ProcessOptions\relax
 \LoadClass[tikz, convert={true,}]{standalone}
+\usetikzlibrary{calc}
 \PassOptionsToPackage{x11names}{xcolor}
 \RequirePackage{xcolor} 
 \RequirePackage{graphicx}
@@ -44,10 +45,11 @@ CS}
                     \usebox{\captionbox}%
                 \fi}}
         };
-        \node (tl) at (pcs.north west) [yshift=7mm] {\ornament[height=1cm, opacity=\pcsu@opacity]{#4}};
-        \node (tr) at (pcs.north east) [yshift=7mm] {\ornament[height=1cm, symmetry=v, opacity=\pcsu@opacity]{#4}};
-        \node (bl) at (text.south west) [yshift=-4mm] {\ornament[height=1cm, symmetry=h, opacity=\pcsu@opacity]{#4}};
-        \node (br) at (text.south east) [yshift=-4mm] {\ornament[height=1cm, symmetry=c, opacity=\pcsu@opacity]{#4}};
+        \node (tl) at (pcs.north west) [xshift=-1cm, yshift=0mm] {\ornament[height=1cm, opacity=\pcsu@opacity]{#4}};
+        \node (tr) at (pcs.north east) [xshift=1cm, yshift=0mm] {\ornament[height=1cm, symmetry=v, opacity=\pcsu@opacity]{#4}};
+        \node (bl) at (text.south west) [xshift=-1cm, yshift=2mm] {\ornament[height=1cm, symmetry=h, opacity=\pcsu@opacity]{#4}};
+        \node (br) at (text.south east) [xshift=1cm, yshift=2mm] {\ornament[height=1cm, symmetry=c, opacity=\pcsu@opacity]{#4}};
+%        \pgfornamenthline{tl}{tr}{north}{87}
         \ifpcsu@boundingbox\draw [use as bounding box, double, thick] (tl.north west) rectangle (br.south east);\fi
     \end{tikzpicture}
 }
