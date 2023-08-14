@@ -24,13 +24,15 @@
 \newsavebox{\univbox}
 \savebox{\univbox}{\goudy UNIVERSITY}
 \savebox{\pcsbox}{\goudy PERSIAN%
-\tikz|\pgfornament[height=.98\ht\univbox, width=.98\ht\univbox, anchor=south, opacity=.8]{124}|;%
+\tikz\pgfornament[height=\ht\univbox, anchor=south, opacity=.8]{124};\hskip2pt%
 CS}
 \DeclareDocumentCommand{\pcsucaption}{ O{38} O{40} m O{61} }{%
     \begin{tikzpicture}[color=black]
         \node (pcs) {\usebox{\pcsbox}};
         \node (univ) [below of=pcs, anchor=north, yshift=2mm]  {\usebox{\univbox}};
-        \node (text) [below of=univ, anchor=north, yshift=-9mm] {\ttfamily \textcolor{gray}{\makebox[\wd\univbox]{\fontsize{#1}{#2}\selectfont #3}}};
+        \node (text) [anchor=north, yshift=-9mm] at (\ifx#3\relax univ\else univ.south\fi) {%
+            \ttfamily \textcolor{gray}{\makebox[\wd\univbox]{\fontsize{#1}{#2}\selectfont #3}}
+        };
         \node (tl) at (pcs.north west) [yshift=7mm] {\ornament[height=2cm,opacity=.6]{#4}};
         \node (tr) at (pcs.north east) [yshift=7mm] {\ornament[height=2cm, symmetry=v,opacity=.6]{#4}};
         \node (bl) at (text.south west) [yshift=-4mm] {\ornament[height=2cm, symmetry=h,opacity=.6]{#4}};
