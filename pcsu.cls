@@ -2,8 +2,10 @@
 \ProvidesClass{pcsu}[2023/08/14 Caption Maker for Persian CS University youtube channel]
 \newif\ifpcsu@han
 \newif\ifpcsu@boundingbox
+\newif\ifpcsu@corner\pcsu@cornertrue
 \DeclareOption{han}{\pcsu@hantrue}
 \DeclareOption{bbox}{\pcsu@boundingboxtrue}
+\DeclareOption{nocorner}{\pcsu@cornerfalse}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{standalone}}
 \ProcessOptions\relax
 \LoadClass[tikz, convert={true,}]{standalone}
@@ -45,10 +47,15 @@ CS}
                     \usebox{\captionbox}%
                 \fi}}
         };
-        \node (tl) at (pcs.north west) [xshift=-1cm, yshift=0mm] {\ornament[height=1cm, opacity=\pcsu@opacity]{#4}};
-        \node (tr) at (pcs.north east) [xshift=1cm, yshift=0mm] {\ornament[height=1cm, symmetry=v, opacity=\pcsu@opacity]{#4}};
-        \node (bl) at (text.south west) [xshift=-1cm, yshift=2mm] {\ornament[height=1cm, symmetry=h, opacity=\pcsu@opacity]{#4}};
-        \node (br) at (text.south east) [xshift=1cm, yshift=2mm] {\ornament[height=1cm, symmetry=c, opacity=\pcsu@opacity]{#4}};
+        \ifpcsu@corner
+            \node (tl) at (pcs.north west) [xshift=-1cm, yshift=0mm] {\ornament[height=1cm, opacity=\pcsu@opacity]{#4}};
+            \node (tr) at (pcs.north east) [xshift=1cm, yshift=0mm] {\ornament[height=1cm, symmetry=v, opacity=\pcsu@opacity]{#4}};
+            \node (bl) at (text.south west) [xshift=-1cm, yshift=2mm] {\ornament[height=1cm, symmetry=h, opacity=\pcsu@opacity]{#4}};
+            \node (br) at (text.south east) [xshift=1cm, yshift=2mm] {\ornament[height=1cm, symmetry=c, opacity=\pcsu@opacity]{#4}};
+        \else
+            \node (tl) at (pcs.north west) [xshift=-2mm, yshift=2mm] {};
+            \node (br) at (text.south east) [xshift=2mm, yshift=1mm] {};
+        \fi
 %        \pgfornamenthline{tl}{tr}{north}{87}
         \ifpcsu@boundingbox\draw [use as bounding box, double, thick] (tl.north west) rectangle (br.south east);\fi
     \end{tikzpicture}
