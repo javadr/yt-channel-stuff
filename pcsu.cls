@@ -9,6 +9,7 @@
 \LoadClass[tikz, convert={true,}]{standalone}
 \PassOptionsToPackage{x11names}{xcolor}
 \RequirePackage{xcolor} 
+\RequirePackage{graphicx}
 \RequirePackage{xparse}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{GoudyIn}
@@ -19,27 +20,34 @@
     \let\ornament\pgfornament%
 \fi
 %
-\def\goudy{\protect\fontsize{19mm}{19mm}\selectfont\GoudyInfamily{}}
+\def\goudy{\protect\fontsize{10mm}{10mm}\selectfont\GoudyInfamily{}}
 \newsavebox{\pcsbox}
 \newsavebox{\univbox}
+\newsavebox{\captionbox}
 \savebox{\univbox}{\goudy UNIVERSITY}
 \savebox{\pcsbox}{\goudy PERSIAN%
-\tikz\pgfornament[height=\ht\univbox, anchor=south, opacity=1]{124};\hskip2pt%
+\tikz\pgfornament[height=\ht\univbox, anchor=south, opacity=1]{124};
+\hskip-13pt%
 CS}
 %
-\DeclareDocumentCommand{\pcsucaption}{ O{38} O{40} m O{61} }{%
-\def\pcsu@opacity{\ifx#3\relax 1\else .6\fi}
+\DeclareDocumentCommand{\pcsucaption}{ O{16} O{20} m O{61} }{%
+\def\pcsu@opacity{\ifx#3\relax 1\else .6\fi}%
+\savebox{\captionbox}{\ttfamily\textcolor{gray}{\fontsize{#1}{#2}\selectfont #3}}%
     \begin{tikzpicture}[color=black]
         \node (pcs) {\usebox{\pcsbox}};
-        \node (univ) [below of=pcs, anchor=north, yshift=2mm]  {\usebox{\univbox}};
-        \node (text) [anchor=north, yshift=-9mm] at (\ifx#3\relax univ\else univ.south\fi) {%
-            \ttfamily \textcolor{gray}{\makebox[\wd\univbox]{\fontsize{#1}{#2}\selectfont #3}}
+        \node (univ) [anchor=north, yshift=2mm]  at (pcs.south) {\usebox{\univbox}};
+        \node (text) [anchor=north, yshift=\ifx#3\relax 0\else-3mm\fi] at (univ.south){%
+            {\makebox[\wd\univbox]{%
+                \ifdim\wd\captionbox>\wd\univbox
+                    \resizebox*{\wd\univbox}{!}{\usebox{\captionbox}}%
+                \else%
+                    \usebox{\captionbox}%
+                \fi}}
         };
-        \node (tl) at (pcs.north west) [yshift=7mm] {\ornament[height=2cm, opacity=\pcsu@opacity]{#4}};
-        \node (tr) at (pcs.north east) [yshift=7mm] {\ornament[height=2cm, symmetry=v, opacity=\pcsu@opacity]{#4}};
-        \node (bl) at (text.south west) [yshift=-4mm] {\ornament[height=2cm, symmetry=h, opacity=\pcsu@opacity]{#4}};
-        \node (br) at (text.south east) [yshift=-4mm] {\ornament[height=2cm, symmetry=c, opacity=\pcsu@opacity]{#4}};
-%        \pgfornamenthline{tl}{tr}{north}{87}
+        \node (tl) at (pcs.north west) [yshift=7mm] {\ornament[height=1cm, opacity=\pcsu@opacity]{#4}};
+        \node (tr) at (pcs.north east) [yshift=7mm] {\ornament[height=1cm, symmetry=v, opacity=\pcsu@opacity]{#4}};
+        \node (bl) at (text.south west) [yshift=-4mm] {\ornament[height=1cm, symmetry=h, opacity=\pcsu@opacity]{#4}};
+        \node (br) at (text.south east) [yshift=-4mm] {\ornament[height=1cm, symmetry=c, opacity=\pcsu@opacity]{#4}};
         \ifpcsu@boundingbox\draw [use as bounding box, double, thick] (tl.north west) rectangle (br.south east);\fi
     \end{tikzpicture}
 }
