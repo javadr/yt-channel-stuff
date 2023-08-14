@@ -1,17 +1,17 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesClass{pcsu}[]
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{standalone}}
-\DeclareOption*{\PassOptionsToClass{x11names}{xcolor}}
+\ProvidesClass{pcsu}[2023/08/14 Caption Maker for Persian CS University youtube channel]
 \newif\ifpcsu@han
 \newif\ifpcsu@boundingbox
 \DeclareOption{han}{\pcsu@hantrue}
 \DeclareOption{bbox}{\pcsu@boundingboxtrue}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{standalone}}
 \ProcessOptions\relax
-\LoadClass[tikz, border=12mm, convert={true,}]{standalone}
+\LoadClass[tikz, convert={true,}]{standalone}
+\PassOptionsToPackage{x11names}{xcolor}
+\RequirePackage{xcolor} 
 \RequirePackage{xparse}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{GoudyIn}
-\RequirePackage{xcolor} 
 \RequirePackage{pgfornament-han}
 \ifpcsu@han
     \let\ornament\pgfornamenthan%
